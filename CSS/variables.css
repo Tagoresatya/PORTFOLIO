@@ -1,0 +1,36 @@
+/*=========================================
+            GOOGLE FONT
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================
+            ROOT VARIABLES
+=========================================*/
+
+:root{
+
+    --primary:#3B82F6;
+    --primary-dark:#2563EB;
+
+    --secondary:#7C3AED;
+
+    --bg:#0F172A;
+    --card:#1E293B;
+
+    --container:1200px;
+
+    --text:#FFFFFF;
+    --text-light:#CBD5E1;
+    --text-muted:#94A3B8;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}

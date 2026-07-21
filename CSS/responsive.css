@@ -1,0 +1,319 @@
+/* Responsive styles will come here */
+
+/*=================================================
+                RESPONSIVE
+=================================================*/
+
+@media (max-width:991px) {
+
+    .custom-navbar {
+        position: fixed;
+    }
+
+    .navbar-collapse {
+
+        position: absolute;
+
+        top: 70px;
+        right: 15px;
+
+        width: 260px;
+
+        background: rgba(30, 41, 59, .95);
+
+        backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(255, 255, 255, .08);
+
+        border-radius: 18px;
+
+        padding: 18px;
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .45);
+
+        animation: menuDrop .35s ease;
+
+    }
+
+    .navbar-nav {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+
+        text-align: center;
+
+        border-radius: 12px;
+
+        padding: 12px;
+
+    }
+
+    .nav-link:hover {
+
+        background: rgba(59, 130, 246, .15);
+
+    }
+
+    .nav-resume {
+
+        margin-top: 10px;
+
+    }
+
+    .nav-resume .btn {
+
+        width: 100%;
+        border-radius: 12px;
+
+    }
+
+}
+
+
+/* #######################----HERO-----################################# */
+
+@media(max-width:991px) {
+
+
+    .hero {
+
+        padding-top: 110px;
+
+    }
+
+    /* .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        min-width: 100%;
+    } */
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .hero-btn {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+}
+
+@media (max-width:991px){
+
+     .hero-image-wrapper{
+        width:220px;
+        height:220px;
+        margin-top:50px;
+    }
+
+    .ring1{
+        width:255px;
+        height:255px;
+        top:-17px;
+        left:-17px;
+    }
+
+    .ring2{
+        width:295px;
+        height:295px;
+        top:-37px;
+        left:-37px;
+    }
+
+}
+
+    .floating-card{
+
+        font-size:13px;
+
+        padding:8px 14px;
+
+    }
+
+    .python{
+
+        top:-15px;
+        left:50%;
+        transform:translateX(-50%);
+
+    }
+
+    .flask{
+        right:-45px;
+    }
+
+    .mysql{
+        left:-45px;
+    }
+
+    .git{
+
+        bottom:-15px;
+        left:50%;
+        transform:translateX(-50%);
+
+    }
+
+
+
+.hero-title {
+
+    font-size: 46px;
+    text-align: center;
+
+}
+
+
+
+@media (max-width:991px) {
+
+    .social-icons {
+        justify-content: center !important;
+        margin-top: 35px;
+    }
+
+    .social-icons a {
+        width: 58px;
+        height: 58px;
+        font-size: 24px;
+    }
+
+}
+
+@media(max-width:991px) {
+
+    .scroll-indicator {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ======ABOUT SECTION====== */
+
+@media(max-width:768px){
+
+.about-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.about-info{
+    grid-template-columns:1fr;
+}
+
+.about-image img{
+    width:250px;
+}
+
+.about-text h3{
+    font-size:28px;
+}
+
+}
+
+
+/* =====--SKILLS SECTION--===== */
+@media(max-width:768px){
+
+.skills-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+
+/* -------Projects Section-------  */
+@media (max-width:768px){
+
+    .project-card img{
+        height:220px;
+    }
+
+    .project-content{
+        padding:20px;
+    }
+
+    .project-content h3{
+        font-size:24px;
+    }
+
+    .project-buttons{
+        flex-direction:column;
+    }
+
+    .project-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+/* --------Certificates Section--------   */
+@media(max-width:768px){
+
+.certification-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* ---------Education Section--------- */
+@media(max-width:768px){
+
+.timeline::before{
+    left:15px;
+}
+
+.timeline-dot{
+    left:6px;
+}
+
+.timeline-item{
+    padding-left:55px;
+}
+
+.timeline-content{
+    padding:20px;
+}
+
+}
+
+
+/* -------Contact Section-------  */
+@media(max-width:768px){
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+.contact-form .btn{
+    width:100%;
+}
+
+}
