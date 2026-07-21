@@ -1,5 +1,9 @@
 console.log("Portfolio Loaded Successfully!");
 
+console.log("Script loaded");
+
+console.log(document.getElementById("contact-form"));
+
 const topBtn = document.getElementById("topBtn");
 
 if (topBtn) {
@@ -17,8 +21,8 @@ if (topBtn) {
     topBtn.onclick = function () {
 
         window.scrollTo({
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
         });
 
     };
@@ -74,27 +78,27 @@ ScrollReveal().reveal(".contact", {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    let current="";
+    let current = "";
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
 
-        const sectionTop=section.offsetTop-120;
+        const sectionTop = section.offsetTop - 120;
 
-        if(pageYOffset>=sectionTop){
+        if (pageYOffset >= sectionTop) {
 
-            current=section.getAttribute("id");
+            current = section.getAttribute("id");
 
         }
 
     });
 
-    navLinks.forEach(link=>{
+    navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href")==="#" + current){
+        if (link.getAttribute("href") === "#" + current) {
 
             link.classList.add("active");
 
@@ -103,3 +107,74 @@ window.addEventListener("scroll",()=>{
     });
 
 });
+
+
+// -------------Email JS----------------
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+
+if (form) {
+
+    form.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+
+        const formData = new FormData(form);
+
+        const button = form.querySelector("button");
+
+        button.innerHTML = "Sending...";
+        button.disabled = true
+
+
+        status.innerHTML = "Sending...";
+
+
+        try {
+
+            const response = await fetch("https://formspree.io/f/mqerlgjr", {
+
+                method: "POST",
+
+                body: formData,
+
+                headers: {
+                    "Accept": "application/json"
+                }
+
+            });
+
+
+            if (response.ok) {
+
+                status.innerHTML = "✅ Message Sent Successfully!";
+
+                form.reset();
+                button.innerHTML = "Send Message";
+                button.disabled = false;
+
+            }
+            else {
+
+                status.innerHTML = "❌ Something went wrong. Try again.";
+
+            }
+
+
+        }
+        catch (error) {
+
+            status.innerHTML = "❌ Network error. Try again.";
+
+            button.innerHTML = "Send Message";
+            button.disabled = false;
+
+        }
+
+
+    });
+
+}

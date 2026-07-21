@@ -17,7 +17,9 @@
         top: 70px;
         right: 15px;
 
-        width: 260px;
+        width: calc(100vw - 30px);
+
+        max-width: 260px;
 
         background: rgba(30, 41, 59, .95);
 
@@ -250,6 +252,13 @@
 /* -------Projects Section-------  */
 @media (max-width:768px){
 
+
+    .projects-container{
+        grid-template-columns:1fr;
+        gap:25px;
+        margin-top:40px;
+    }
+
     .project-card img{
         height:220px;
     }
@@ -259,7 +268,7 @@
     }
 
     .project-content h3{
-        font-size:24px;
+        font-size:22px;
     }
 
     .project-buttons{
@@ -286,34 +295,160 @@
 /* ---------Education Section--------- */
 @media(max-width:768px){
 
-.timeline::before{
-    left:15px;
-}
+    .education{
+        padding:60px 0;
+    }
 
-.timeline-dot{
-    left:6px;
-}
 
-.timeline-item{
-    padding-left:55px;
-}
+    .timeline{
 
-.timeline-content{
-    padding:20px;
-}
+        margin-top:40px;
+
+    }
+
+
+    .timeline::before{
+
+        left:15px;
+        width:2px;
+
+    }
+
+
+    .timeline-item{
+
+        padding-left:50px;
+        margin-bottom:30px;
+
+    }
+
+
+    .timeline-dot{
+
+        left:6px;
+        width:18px;
+        height:18px;
+        border-width:3px;
+
+    }
+
+
+    .timeline-content{
+
+        padding:18px;
+        border-radius:12px;
+
+    }
+
+
+    .year{
+
+        padding:5px 12px;
+        font-size:13px;
+
+    }
+
+
+    .timeline-content h3{
+
+        font-size:20px;
+
+    }
+
+
+    .timeline-content h4{
+
+        font-size:16px;
+
+    }
+
+
+    .timeline-content p{
+
+        font-size:14px;
+        line-height:1.6;
+
+    }
 
 }
 
 
 /* -------Contact Section-------  */
+
+
 @media(max-width:768px){
 
-.contact-container{
-    grid-template-columns:1fr;
-}
+    .contact{
+        padding:60px 0;
+    }
 
-.contact-form .btn{
-    width:100%;
-}
+    .contact-container{
+        grid-template-columns:1fr;
+        gap:30px;
+        margin-top:40px;
+    }
+
+
+    .contact-card{
+
+        padding:15px;
+        gap:15px;
+        margin-bottom:15px;
+
+    }
+
+
+    .contact-card i{
+
+        font-size:22px;
+        min-width:30px;
+
+    }
+
+
+    .contact-card h3{
+
+        font-size:18px;
+
+    }
+
+
+    .contact-card p,
+    .contact-card a{
+
+        font-size:14px;
+        word-break:break-word;
+
+    }
+
+
+    .contact-form form{
+
+        gap:15px;
+
+    }
+
+
+    .contact-form input,
+    .contact-form textarea{
+
+        padding:12px;
+        font-size:14px;
+
+    }
+
+
+    .contact-form textarea{
+
+        height:140px;
+
+    }
+
+
+    .contact-form .btn{
+
+        width:100%;
+
+    }
 
 }

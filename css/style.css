@@ -9,6 +9,9 @@
     box-sizing: border-box;
 
 }
+html, body {
+    overflow-x:hidden;
+}
 
 html {
 
@@ -42,6 +45,8 @@ body {
     color: var(--text);
 
     overflow-x: hidden;
+
+    width: 100%;
 
 }
 
@@ -240,9 +245,8 @@ section {
 
     position:absolute;
 
-    width:600px;
-
-    height:600px;
+    width:350px;
+    height:350px;
 
     background:radial-gradient(
 
@@ -904,7 +908,7 @@ section {
 
 .projects-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:35px;
     margin-top:60px;
 }
@@ -1352,5 +1356,26 @@ section {
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
+
+}
+
+#form-status{
+    margin-top:15px;
+    font-size:15px;
+    font-weight:600;
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
