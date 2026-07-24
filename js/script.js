@@ -170,7 +170,7 @@ if (form) {
             status.innerHTML = "❌ Network error. Try again.";
 
             button.innerHTML = "Send Message";
-            button.disabled = false;
+            button.disabled = false; 
 
         }
 
